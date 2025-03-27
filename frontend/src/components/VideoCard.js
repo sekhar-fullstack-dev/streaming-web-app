@@ -42,7 +42,15 @@ const VideoCard = ({ video }) => {
             backgroundColor: 'rgba(0, 0, 0, 0.08)'
           }}
         >
-          <MovieIcon sx={{ fontSize: 60, opacity: 0.6 }} />
+          {video.thumbnailUrl ? (
+            <img 
+              src={`http://localhost:3000${video.thumbnailUrl}`}
+              alt={video.title}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          ) : (
+            <MovieIcon sx={{ fontSize: 60, opacity: 0.6 }} />
+          )}
         </CardMedia>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
