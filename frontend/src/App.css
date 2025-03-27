@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+.video-player-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

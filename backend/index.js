@@ -2,12 +2,17 @@ require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
+// Then add this middleware after creating the express app and before other middleware:
+app.use(cors());
 
 // Videos directory path
 const videosDir = path.join(__dirname, 'videos');
